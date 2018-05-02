@@ -1,0 +1,25 @@
+{
+  "name": "javascript-unit-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --report progress buildScript/testSetup.js \"test/*.test.js\" \"./test/**/*.*.test.js\"" ,
+    "test:watch": "npm run test -- --watch",
+    "start": "npm-run-all --parallel open:src test:watch",
+    "open:src": "babel-node buildScript/srcServer.js"
+
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "babel-cli": "6.16.0",
+    "babel-core": "6.17.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-latest": "6.16.0",
+    "babel-register": "6.16.3"
+  }
+}
